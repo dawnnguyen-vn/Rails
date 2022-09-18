@@ -1,0 +1,10 @@
+    <div id="edit_menu" class="menu">
+        <input value="<%=todo.title%>" id= "title">
+        <select value="<%=todo.priority%>" id= "priority">
+            <option value = "High">High</option>
+            <option value = "Medium">Medium</option>
+            <option value = "Low">Low</option>
+        </select>
+        <input value="<%=todo.time%>" id="time" type = "date">
+        <button onClick= "handlePatch(<%=todo.id%>)" id="edit">edit</button>
+    </div>

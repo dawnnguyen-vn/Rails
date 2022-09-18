@@ -1,0 +1,2 @@
+$('#add-menu').remove();
+$('#menu').append("<%= escape_javascript(render partial: 'menu', locals:{ todo: @todo} ) %>")

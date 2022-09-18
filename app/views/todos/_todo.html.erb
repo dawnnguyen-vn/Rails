@@ -1,0 +1,14 @@
+        <li id="li-<%=todo.id%>">
+            <input id="completed-<%=todo.id%>"
+                <%=
+                    if todo.completed == true
+                        'checked'
+                    end
+                %>
+            
+               onClick="handleCheck(<%=todo.id%>)" type = "checkbox" value ="<%=todo.completed%>">
+            <span id="title-<%=todo.id%>"><%=todo.title%></span>-<%=todo.priority%>-<%=Date.strptime(todo.time).strftime("%B")[0,3]%>
+            <%=Date.strptime(todo.time).strftime("%d")%>
+            <button onClick="handleDelete(<%=todo.id%>)">x</button>
+            <button onClick="handleEdit(<%=todo.id%>)">Edit</button>
+        </li>

@@ -1,0 +1,24 @@
+<div id="main" class="main">
+    <h1>Todos</h1>
+    <div id="menu">
+        <div id="add-menu" class="menu">
+            <input id= "title">
+            <select id= "priority">
+                <option value = "High">High</option>
+                <option value = "Medium">Medium</option>
+                <option value = "Low">Low</option>
+            </select>
+            <input id="time" type = "date">
+            <button id="save">Save</button>
+        </div>
+    </div>
+
+    <ul id= "list">
+    <% @todos.each do |todo| %>
+        <%= render partial:"todo", locals: {todo: todo}%>
+    <% end %>
+    </ul>
+</div>
+
+
+
